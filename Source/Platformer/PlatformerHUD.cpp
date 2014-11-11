@@ -11,7 +11,7 @@ APlatformerHUD::APlatformerHUD(const class FPostConstructInitializeProperties& P
 {
 
 	// use the RobotoDistanceField font
-	static ConstructorHelpers::FObjectFinder<UFont>HUDFontOb(TEXT("/Engine/Content/EngineFonts/RobotoDistanceFiled"));
+	static ConstructorHelpers::FObjectFinder<UFont>HUDFontOb(TEXT("/Engine/Content/EngineFonts/RobotoDistanceField"));
 	HUDFont = HUDFontOb.Object;
 
 }
