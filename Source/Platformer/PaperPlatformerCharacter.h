@@ -49,6 +49,10 @@ class PLATFORMER_API APaperPlatformerCharacter : public APaperCharacter
 	// Boom connecting camera to player position
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
 	TSubobjectPtr<class USpringArmComponent> CameraBoom;
+    
+    // Damage Collision Box
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Damage)
+    TSubobjectPtr<class UBoxComponent> DamageBox;
 	
 	// Movement State
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Enum)

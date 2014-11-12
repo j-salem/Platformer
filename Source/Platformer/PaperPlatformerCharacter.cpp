@@ -51,6 +51,12 @@ APaperPlatformerCharacter::APaperPlatformerCharacter(const class FPostConstructI
 	bUseControllerRotationYaw = true;
 	bUseControllerRotationRoll = false;
 
+    // Setup damage box
+    DamageBox = PCIP.CreateDefaultSubobject<UBoxComponent>(this, TEXT("DamageBox"));
+    DamageBox->SetBoxExtent(FVector(40.0f, 0.0f, 60.0f)); // extends 40 units from the character
+    DamageBox->AttachTo(RootComponent);
+    DamageBox->RelativeLocation = FVector(40.0f, 0.0f, 0.0f);
+    
 	// attach camera boom to capsule
 	CameraBoom = PCIP.CreateDefaultSubobject<USpringArmComponent>(this, TEXT("CameraBoom"));
 	CameraBoom->AttachTo(RootComponent);
